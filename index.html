@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Abhimanyu Hari — Performance Marketing &amp; Paid Acquisition</title>
-<meta name="description" content="Abhimanyu Hari — performance marketing and paid acquisition. Meta Ads and TikTok Ads, e-commerce growth on Shopify, SEO and Google Business Profile.">
+<meta name="description" content="Abhimanyu Hari — performance marketing and paid acquisition. 7.116× Purchase ROAS on AED 11,987 of TikTok spend for Coral Perfumes, July 2026.">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000'/%3E%3Ctext x='50' y='68' font-family='Helvetica,Arial' font-weight='700' font-size='44' fill='%23fff' text-anchor='middle'%3EAH%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <noscript><style>
   .up{opacity:1!important;transform:none!important;}
   .capPin,.whPin{position:static!important;height:auto!important;display:block!important;padding-block:4rem!important;}
@@ -40,7 +40,8 @@
   --faint:rgba(255,255,255,.40);
   --red:#D6342C;
   --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  --sans:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --disp:'Space Grotesk','Inter',-apple-system,Helvetica,Arial,sans-serif;
   --e:cubic-bezier(.22,1,.36,1);
   --maxw:1180px;
   --pad:clamp(1.15rem,4.5vw,3.5rem);
@@ -66,7 +67,7 @@ ul{list-style:none;}
 button{font:inherit;color:inherit;background:none;border:none;cursor:pointer;}
 input,textarea{font:inherit;color:inherit;background:none;border:none;width:100%;font-size:1rem;}
 ::selection{background:var(--black);color:var(--white);}
-h1,h2,h3{font-weight:600;letter-spacing:-.035em;line-height:1.03;overflow-wrap:break-word;}
+h1,h2,h3{font-family:var(--disp);font-weight:600;letter-spacing:-.045em;line-height:.98;overflow-wrap:break-word;}
 p{overflow-wrap:break-word;}
 :focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px;}
 section[id]{scroll-margin-top:var(--navh);}
@@ -87,9 +88,9 @@ section[id]{scroll-margin-top:var(--navh);}
 .dark .label::after{background:var(--line-dk);}
 .dark .label b{color:var(--white);}
 
-.h1{font-size:clamp(2.6rem,13vw,8.5rem);font-weight:700;letter-spacing:-.055em;}
-.h2{font-size:clamp(1.85rem,6.2vw,3.4rem);}
-.lede{color:var(--grey);max-width:52ch;margin-top:1.5rem;font-size:clamp(.97rem,2.5vw,1.06rem);}
+.h1{font-size:clamp(2.9rem,12.4vw,9.4rem);font-weight:700;letter-spacing:-.055em;line-height:.86;}
+.h2{font-size:clamp(2.15rem,7vw,4.6rem);line-height:.96;}
+.lede{color:var(--grey);max-width:46ch;margin-top:1.6rem;font-size:clamp(1.02rem,2.6vw,1.22rem);line-height:1.5;}
 .dark .lede{color:var(--dim);}
 
 /* buttons */
@@ -139,6 +140,7 @@ section[id]{scroll-margin-top:var(--navh);}
   color:#fff;mix-blend-mode:difference;opacity:0;transition:opacity .4s var(--e);pointer-events:none;display:none;
 }
 #hud.on{opacity:1;}
+.hudkeys{opacity:.5;}
 @media (min-width:1000px) and (min-height:640px){#hud{display:block;}}
 
 /* ============================================================
@@ -216,7 +218,7 @@ section[id]{scroll-margin-top:var(--navh);}
   min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
   align-items:center;justify-content:center;text-align:center;
   background:var(--black);color:var(--white);position:relative;overflow:hidden;
-  padding:clamp(5.5rem,17vh,8rem) var(--gl) clamp(4.5rem,13vh,6rem);
+  padding:clamp(5rem,12vh,6.6rem) var(--gl) clamp(3.6rem,9vh,4.6rem);
 }
 .grid-a,.grid-b{position:absolute;inset:-2px;pointer-events:none;background-size:24px 24px;}
 .grid-a{background-image:radial-gradient(rgba(255,255,255,.16) 1.1px,transparent 1.1px);}
@@ -228,24 +230,52 @@ section[id]{scroll-margin-top:var(--navh);}
 }
 .hoverable #home:hover .grid-b{opacity:1;}
 .touch .grid-b{opacity:.8;animation:sweep 11s ease-in-out infinite;}
+/* phones get a clean black hero — no dot field at all */
+@media (max-width:760px){
+  .grid-a,.grid-b{display:none!important;animation:none!important;}
+}
 @keyframes sweep{0%,100%{--mx:25%;--my:35%;}50%{--mx:75%;--my:60%;}}
-#heroIn{position:relative;z-index:2;max-width:900px;width:100%;}
+#heroIn{position:relative;z-index:2;max-width:var(--maxw);width:100%;margin-inline:auto;}
+.hstrip{
+  display:grid;grid-template-columns:repeat(3,1fr);justify-content:center;
+  gap:clamp(1.4rem,5vw,3.5rem);margin-top:clamp(1.3rem,3.4vh,2rem);
+  border-top:1px solid var(--line-dk);padding-top:clamp(.9rem,2.2vh,1.25rem);
+}
+.hstrip b{display:block;font-family:var(--disp);font-weight:700;letter-spacing:-.04em;
+  font-size:clamp(1.15rem,4.6vw,2rem);line-height:1;}
+.hstrip span{display:block;font-family:var(--mono);font-size:clamp(.67rem,1.9vw,.72rem);
+  letter-spacing:.11em;text-transform:uppercase;color:var(--faint);margin-top:.45rem;}
+@media (max-width:365px){
+  /* 320px screens: the sub-line and the metric strip already carry the message,
+     so the descriptive paragraph goes rather than pushing the hero past the fold */
+  .htxt{display:none;}
+  .pill{font-size:.6rem;letter-spacing:.07em;padding:.45rem .8rem .45rem .65rem;}
+  .hbtns{gap:.45rem;}
+  .hbtns .btn{padding:.8rem 1.15rem;min-height:44px;}
+  #home{padding-top:4.4rem;padding-bottom:2.6rem;}
+}
+@media (max-width:420px){
+  .hstrip{gap:.6rem .8rem;margin-top:1rem;padding-top:.8rem;}
+  .hstrip b{font-size:clamp(.98rem,4.4vw,1.2rem);}
+  .hstrip span{font-size:.67rem;letter-spacing:.06em;}
+  .hstrip div + div::before{left:-.4rem;}
+  #home{padding-top:4.6rem;padding-bottom:3rem;}
+  .htxt{margin-top:.85rem;}
+}
 .pill{
   display:inline-flex;align-items:center;gap:.6rem;max-width:100%;
-  margin-bottom:clamp(1.3rem,5vh,2.3rem);
+  margin-bottom:clamp(1.1rem,3.4vh,1.8rem);
   font-family:var(--mono);font-size:clamp(.68rem,2.6vw,.74rem);letter-spacing:.13em;text-transform:uppercase;
   color:var(--dim);border:1px solid var(--line-dk);border-radius:980px;padding:.5rem 1rem .5rem .78rem;
 }
 .hsub{font-family:var(--mono);font-size:clamp(.68rem,2.6vw,.82rem);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-top:clamp(.9rem,3vh,1.6rem);}
-.htxt{color:var(--faint);max-width:40ch;margin:1.2rem auto 0;font-size:clamp(.93rem,2.7vw,1rem);}
-.hbtns{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin-top:clamp(1.6rem,5vh,2.6rem);}
+.htxt{color:var(--dim);max-width:44ch;margin:1rem auto 0;font-size:clamp(.98rem,2.7vw,1.1rem);line-height:1.5;}
+.hbtns{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin-top:clamp(1.3rem,3.4vh,1.9rem);}
 .hfoot{
   position:absolute;left:var(--gl);right:var(--gr);bottom:calc(1.1rem + env(safe-area-inset-bottom,0px));z-index:2;
   display:flex;justify-content:space-between;align-items:center;gap:1rem;
   font-family:var(--mono);font-size:clamp(.68rem,2.2vw,.74rem);letter-spacing:.12em;text-transform:uppercase;color:var(--faint);
 }
-.cue{width:1px;height:28px;background:linear-gradient(#fff,transparent);animation:cue 2s ease-in-out infinite;flex:none;}
-@keyframes cue{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}51%{transform:scaleY(1);transform-origin:bottom;}100%{transform:scaleY(0);transform-origin:bottom;}}
 
 /* TICKER — scrubbed by scroll, not auto */
 #tick{background:var(--black);color:var(--white);border-block:1px solid var(--line-dk);padding-block:.85rem;overflow:hidden;}
@@ -258,7 +288,7 @@ section[id]{scroll-margin-top:var(--navh);}
    ============================================================ */
 .abt{display:grid;grid-template-columns:1fr;gap:clamp(2rem,5vw,3rem);}
 @media (min-width:900px){.abt{grid-template-columns:1.5fr 1fr;gap:clamp(3rem,5vw,5rem);}}
-.ink{color:var(--black);max-width:56ch;margin-top:1.7rem;}
+.ink{color:var(--black);max-width:50ch;margin-top:1.8rem;font-size:clamp(1.02rem,2.6vw,1.2rem);line-height:1.5;}
 .ink .w{display:inline-block;opacity:.16;will-change:opacity;}
 .nojs .ink .w{opacity:1;}
 .edu{border-top:1px solid var(--line);padding-top:1.3rem;margin-top:1.3rem;}
@@ -268,7 +298,7 @@ section[id]{scroll-margin-top:var(--navh);}
 .edu p{color:var(--grey);font-size:.9rem;}
 .edu .d{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--grey-lt);margin-top:.8rem;}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.4rem,2vw,1rem);margin-top:clamp(2.5rem,7vw,4rem);border-top:1px solid var(--line);padding-top:2rem;}
-.stats b{display:block;font-size:clamp(1.4rem,6.5vw,3.1rem);font-weight:700;letter-spacing:-.04em;line-height:1;}
+.stats b{display:block;font-family:var(--disp);font-size:clamp(1.75rem,7.5vw,4rem);font-weight:700;letter-spacing:-.04em;line-height:1;}
 .stats span{display:block;font-family:var(--mono);font-size:clamp(.66rem,1.8vw,.72rem);letter-spacing:.1em;text-transform:uppercase;color:var(--grey-lt);margin-top:.6rem;}
 
 /* ============================================================
@@ -277,7 +307,7 @@ section[id]{scroll-margin-top:var(--navh);}
 .cor{display:grid;grid-template-columns:1fr;gap:clamp(1.2rem,5vw,2.5rem);}
 @media (min-width:900px){.cor{grid-template-columns:.9fr 1.1fr;gap:clamp(3rem,5vw,5rem);}
   .corPin{position:sticky;top:24vh;align-self:start;}}
-.corNum{font-size:clamp(3.2rem,17vw,10rem);font-weight:700;letter-spacing:-.06em;line-height:.85;transition:opacity .3s var(--e);}
+.corNum{font-family:var(--disp);font-size:clamp(3.2rem,17vw,10rem);font-weight:700;letter-spacing:-.06em;line-height:.85;transition:opacity .3s var(--e);}
 .corWho{font-family:var(--mono);font-size:clamp(.67rem,2.1vw,.73rem);letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:.8rem;}
 .corRole{font-size:clamp(1.05rem,3.5vw,1.3rem);font-weight:600;letter-spacing:-.02em;margin-top:1.2rem;min-height:1.4em;transition:opacity .3s var(--e);}
 .corBars{display:flex;gap:.4rem;margin-top:1.3rem;}
@@ -302,6 +332,7 @@ section[id]{scroll-margin-top:var(--navh);}
   padding-right:calc((100% - min(100%,var(--maxw)))/2 + var(--gr));
   will-change:transform;
 }
+.capH2m,.capSubm{display:none;}
 .capLead{flex:none;width:clamp(215px,68vw,420px);display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:.8rem;}
 .capLead h2{font-size:clamp(1.7rem,6vw,3.2rem);}
 .capLead p{color:var(--grey);margin-top:.9rem;font-size:clamp(.85rem,2.4vw,.94rem);max-width:32ch;}
@@ -382,24 +413,49 @@ section[id]{scroll-margin-top:var(--navh);}
   padding-block:clamp(1.1rem,3.5vw,1.6rem);
   display:grid;grid-template-columns:auto 1fr;gap:clamp(.75rem,3vw,1.2rem);align-items:start;
 }
-.row .n{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--grey-lt);padding-top:.45rem;transition:color .4s var(--e);}
-.row h3{font-size:clamp(1rem,3.5vw,1.32rem);color:var(--grey-lt);transition:color .4s var(--e),transform .5s var(--e);}
-.row p{color:var(--grey);font-size:clamp(.85rem,2.4vw,.93rem);margin-top:.4rem;max-width:58ch;opacity:.35;transition:opacity .4s var(--e),transform .5s var(--e);}
+/* each row is masked, then wipes open left-to-right as the section arrives */
+.row{overflow:hidden;}
+.row .n,.row h3,.row p{
+  transform:translateY(120%);opacity:0;
+  transition:transform .85s var(--e),opacity .7s var(--e),color .4s var(--e);
+}
+.row.rev .n,.row.rev h3,.row.rev p{transform:translateY(0);opacity:1;}
+.row .rule{position:absolute;left:0;right:0;top:0;height:1px;background:var(--line);
+  transform:scaleX(0);transform-origin:left;transition:transform .9s var(--e);}
+.row.rev .rule{transform:scaleX(1);}
+.row:first-child .rule{display:none;}
+.row .n{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--grey-lt);padding-top:.45rem;}
+.row h3{font-size:clamp(1rem,3.5vw,1.32rem);color:var(--grey-lt);}
+.row p{color:var(--grey);font-size:clamp(.85rem,2.4vw,.93rem);margin-top:.4rem;max-width:58ch;}
+.row.rev p{opacity:.4;}
 .row .bar{position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--black);transform:scaleX(0);transform-origin:left;transition:transform .55s var(--e);}
+/* active row: title steps forward, body clarifies, rule under it inks in */
+.row.on h3{transform:translateY(0) translateX(clamp(5px,1.8vw,13px));}
+.row.on p{opacity:1;transform:translateY(0) translateX(clamp(5px,1.8vw,13px));}
 .row.on .n{color:var(--black);}
 .row.on h3{color:var(--black);transform:translateX(clamp(5px,1.8vw,13px));}
 .row.on p{opacity:1;transform:translateX(clamp(5px,1.8vw,13px));}
 .row.on .bar{transform:scaleX(1);}
 .nojs .row h3{color:var(--black);} .nojs .row p{opacity:1;}
+.nojs .row .n,.nojs .row h3,.nojs .row p{transform:none;opacity:1;}
+@media print{.row .n,.row h3,.row p{transform:none!important;opacity:1!important;}.row .rule{transform:scaleX(1)!important;}}
 
 /* ============================================================
    07  WORK — sticky card stack
    ============================================================ */
 .stack{margin-top:clamp(1.8rem,6vw,2.8rem);}
+/* Cards used to pin and stack. Once they carried real data they grew taller
+   than the viewport, so a pinned card's lower half became unreachable and the
+   next card slid over it. They now flow normally and rise in on arrival. */
 .card{
-  position:sticky;background:var(--white);border:1px solid var(--line);border-radius:22px;
-  overflow:hidden;will-change:transform;margin-bottom:clamp(1.3rem,4vw,2.2rem);
+  position:relative;background:var(--white);border:1px solid var(--line);border-radius:22px;
+  overflow:hidden;margin-bottom:clamp(1.5rem,4vw,2.6rem);
+  /* Cards must stay fully opaque: they physically stack, so any fade lets the
+     card underneath read straight through. The stacking is the animation. */
+  opacity:1;
 }
+.card.seen{opacity:1;}
+.nojs .card,.slow .card{opacity:1;transform:none;}
 .card:last-child{margin-bottom:0;}
 .card .hd{background:var(--black);color:var(--white);padding:clamp(1rem,3.5vw,1.4rem) clamp(1.15rem,4vw,2.3rem);display:flex;align-items:center;justify-content:space-between;gap:.7rem;flex-wrap:wrap;}
 .card .hd h3{font-size:clamp(1rem,4vw,1.6rem);}
@@ -472,19 +528,30 @@ footer{background:var(--black);color:var(--faint);border-top:1px solid var(--lin
 }
 
 @media (max-width:760px){
-  /* CAPABILITIES — cards were short inside a full-height pin, leaving big
-     empty bands above and below. Taller cards fill the frame. */
-  .capCard{min-height:clamp(300px,57svh,440px);}
-  .capDots{min-height:.6rem;margin-block:.85rem;}
-  .capLead{width:clamp(200px,60vw,340px);padding-bottom:.4rem;}
-  .capHead{margin-bottom:1rem;}
+  /* HERO — sits lower and tighter so it isn't 270px of air above the badge */
+  #home{min-height:82svh;padding-top:clamp(4.4rem,12vh,5.5rem);padding-bottom:clamp(2.6rem,7vh,3.6rem);}
+  .pill{margin-bottom:1.1rem;}
+  .hbtns{margin-top:1.5rem;}
+
+  /* CAPABILITIES — cards fill the pinned frame instead of floating in it */
+  .capDots{min-height:2.5rem;margin-block:1rem;}
+  /* the lead panel left a tall void above its bottom-aligned text on phones —
+     the heading lives in the sticky header instead and the track is just cards */
+  .capLead{display:none;}
+  .capH2m{display:block;font-size:clamp(1.7rem,8vw,2.4rem);margin-top:.15rem;}
+  .capSubm{display:block;color:var(--grey);margin-top:.5rem;font-size:clamp(.88rem,3.5vw,.98rem);max-width:30ch;}
+  .capHead{margin-bottom:1.1rem;}
+  .capRail{margin-top:1rem;}
+  .capCard{min-height:clamp(280px,62svh,580px);}
+  /* centred content must start below the 74px nav, not behind it */
+  .capPin{padding-top:calc(74px + env(safe-area-inset-top,0px));}
 
   .card{margin-bottom:1rem;}
   .card .bd{padding:1.1rem 1.15rem 1.3rem;}
   .figs{gap:.85rem 1.4rem;margin-top:1.1rem;}
   .meta{margin-top:1.1rem;padding-top:.9rem;line-height:1.65;}
   .tags{margin-top:1.1rem;}
-  .sec{padding-block:clamp(3.2rem,10vw,9rem);}
+  .sec{padding-block:clamp(2.6rem,8vw,9rem);}
   .abt{gap:1.75rem;}
   .stats{margin-top:2rem;padding-top:1.6rem;}
   .rows{margin-top:1.5rem;}
@@ -493,7 +560,6 @@ footer{background:var(--black);color:var(--faint);border-top:1px solid var(--lin
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
   .grid-b{animation:none;}
-  .cue{animation:none;opacity:.5;}
   .live::after{animation:none;}
   .rt{animation-duration:calc(var(--dur,40s) * 2.2);}
   .up{transition-duration:.35s;}
@@ -510,16 +576,28 @@ footer{background:var(--black);color:var(--faint);border-top:1px solid var(--lin
   letter-spacing:.12em;text-transform:uppercase;transition:top .25s var(--e);}
 .skip:focus{top:calc(.8rem + env(safe-area-inset-top,0px));}
 
+
+.hstrip{max-width:640px;margin-inline:auto;}
+.hstrip div{position:relative;}
+.hstrip div + div::before{content:'';position:absolute;left:calc(-1 * clamp(.7rem,2.5vw,1.75rem));
+  top:.15em;bottom:.35em;width:1px;background:var(--line-dk);}
+.hstrip b,.hstrip span{text-align:center;}
+@media print{
+}
+
 #grain{
-  position:fixed;inset:-120%;z-index:390;pointer-events:none;opacity:.05;
+  /* was inset:-120% — a layer ~11x the viewport area, repainted 6x/sec.
+     A small overscan does the same job for a fraction of the cost. */
+  position:fixed;inset:-7%;z-index:390;pointer-events:none;opacity:.05;contain:strict;
+  will-change:transform;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
-  animation:grain 900ms steps(6) infinite;
+  animation:grain 1100ms steps(5) infinite;
 }
 @keyframes grain{
-  0%{transform:translate(0,0)}   16%{transform:translate(-4%,-3%)}
-  33%{transform:translate(3%,-5%)} 50%{transform:translate(-2%,4%)}
-  66%{transform:translate(4%,2%)}  83%{transform:translate(-3%,3%)}
-  100%{transform:translate(0,0)}
+  0%{transform:translate3d(0,0,0)}      16%{transform:translate3d(-3%,-2%,0)}
+  33%{transform:translate3d(2%,-3%,0)}  50%{transform:translate3d(-2%,3%,0)}
+  66%{transform:translate3d(3%,1%,0)}   83%{transform:translate3d(-2%,2%,0)}
+  100%{transform:translate3d(0,0,0)}
 }
 
 /* ---- hero canvas field ---- */
@@ -540,8 +618,6 @@ footer{background:var(--black);color:var(--faint);border-top:1px solid var(--lin
 #cring.hide,#cdot.hide{opacity:0;}
 .cursorfx,.cursorfx *{cursor:none!important;}
 
-/* ---- scroll-velocity skew (leaf elements only, never sticky ancestors) ---- */
-.skew{will-change:transform;}
 
 /* ---- capability card depth ---- */
 .capCard{will-change:transform,opacity;}
@@ -584,13 +660,218 @@ body.introlock{overflow:hidden;}
 /* ---- label scramble ---- */
 .label .sc{display:inline-block;}
 
+
+/* ---- mobile skills: vertical index reel replaces the ring ---- */
+.whStage.reel .whRing,.whStage.reel .whMark,.whStage.reel .whTicks{display:none!important;}
+.whStage.reel .whIt{font-family:var(--disp);
+  left:var(--gl);transform-origin:left center;
+  font-family:var(--sans);font-weight:600;letter-spacing:-.025em;text-transform:none;
+  font-size:clamp(1.4rem,7.6vw,2.15rem);color:rgba(255,255,255,.22);
+}
+.whStage.reel .whIt.on{color:#fff;text-shadow:none;}
+.reelBar{position:absolute;left:0;right:0;top:var(--cy,50%);height:1px;
+  background:rgba(255,255,255,.13);transform:translateY(-50%);display:none;}
+.whStage.reel .reelBar{display:block;}
+.reelBar::before{content:'';position:absolute;left:0;top:-3px;
+  width:calc(var(--gl) - 12px);height:7px;background:#fff;}
+.whStage.reel .whCore{
+  top:auto;bottom:var(--coreB,9%);left:var(--gl);right:var(--gr);
+  transform:none;width:auto!important;text-align:left;
+}
+.whStage.reel .whCore h3{display:none;}
+.whStage.reel .whCore .n{font-size:.7rem;}
+.whStage.reel .whCore p{min-height:0;margin-top:.55rem;max-width:34ch;
+  font-size:clamp(.9rem,3.6vw,1rem);color:var(--dim);}
+
+/* ---- interactive unit-economics model ---- */
+.model{margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--line);}
+.model .mh{font-family:var(--mono);font-size:.67rem;letter-spacing:.13em;text-transform:uppercase;color:var(--grey-lt);
+  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;}
+.model .mh b{color:var(--black);font-weight:500;font-size:.9rem;letter-spacing:0;}
+.mslider{width:100%;margin:1.1rem 0 .35rem;-webkit-appearance:none;appearance:none;background:transparent;height:44px;cursor:ew-resize;display:block;}
+.mslider::-webkit-slider-runnable-track{height:2px;background:var(--line);}
+.mslider::-moz-range-track{height:2px;background:var(--line);}
+.mslider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;
+  background:var(--black);margin-top:-8px;border:0;transition:transform .18s var(--e);}
+.mslider::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--black);border:0;}
+.mslider:active::-webkit-slider-thumb{transform:scale(1.28);}
+.mslider:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px rgba(0,0,0,.18);}
+.mout{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:.5rem;}
+.mout div b{display:block;font-size:clamp(1rem,4vw,1.45rem);font-weight:700;letter-spacing:-.03em;font-variant-numeric:tabular-nums;}
+.mout div span{display:block;font-family:var(--mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-lt);margin-top:.3rem;}
+.mfoot{font-family:var(--mono);font-size:.63rem;letter-spacing:.06em;text-transform:uppercase;color:var(--grey-lt);margin-top:1rem;line-height:1.7;}
+
+/* ---- live local clock ---- */
+#clock{font-variant-numeric:tabular-nums;}
+
+/* ---- copied confirmation ---- */
+.copied{position:fixed;left:50%;bottom:2rem;transform:translate(-50%,14px);z-index:600;
+  background:#fff;color:#000;border-radius:980px;padding:.75rem 1.3rem;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  opacity:0;pointer-events:none;transition:opacity .3s var(--e),transform .3s var(--e);}
+.copied.on{opacity:1;transform:translate(-50%,0);}
+
+/* ---- print: a clean one-page CV ---- */
+@media print{
+  @page{margin:12mm;}
+  *{background:transparent!important;color:#000!important;box-shadow:none!important;
+    text-shadow:none!important;animation:none!important;transition:none!important;}
+  html,body{background:#fff!important;font-size:10pt;line-height:1.42;}
+  #nav,#hud,#bar,#grain,#field,#intro,#cdot,#cring,.skip,
+  .grid-a,.grid-b,.whTicks,.reelBar,.capRail,.hint,.hfoot,
+  .rails,#tick,.copied,form,.note,.capDots,.whStage,.pill{display:none!important;}
+
+  /* single column everywhere — printed pages are narrow */
+  .abt,.cor,.ct,.capTrack{display:block!important;}
+  .wrap{max-width:none!important;padding:0!important;}
+
+  /* hero collapses to a CV masthead */
+  #home{min-height:0!important;height:auto!important;padding:0 0 6mm!important;
+    text-align:left!important;display:block!important;border-bottom:1.5px solid #000!important;}
+  .h1{font-size:23pt!important;margin-bottom:1mm!important;}
+  .h1 .lt{transform:none!important;}
+  .hsub{font-size:9pt!important;margin:0 0 2mm!important;letter-spacing:.14em!important;}
+  .htxt{max-width:none!important;margin:0!important;font-size:10pt!important;}
+  .hbtns{display:none!important;}
+  #home::after{content:'hariabhimanyu894@gmail.com  ·  linkedin.com/in/abhimanyuhariofficial  ·  Adoor, Kerala';
+    display:block;margin-top:3mm;font-family:var(--mono);font-size:8.5pt;letter-spacing:.04em;}
+
+  section{padding-block:0 6mm!important;min-height:0!important;height:auto!important;}
+  .sec{padding-block:5mm 0!important;}
+  .label{color:#555!important;margin-bottom:2mm!important;font-size:8pt!important;}
+  .h2{font-size:14pt!important;margin-bottom:2mm!important;}
+
+  .capPin,.whPin{position:static!important;height:auto!important;padding:0!important;display:block!important;}
+  .capView{overflow:visible!important;}
+  .capCard,.capLead{width:auto!important;min-height:0!important;border:none!important;
+    border-top:1px solid #ccc!important;margin:0!important;padding:2.5mm 0!important;
+    page-break-inside:avoid;border-radius:0!important;}
+  .capCard h3{font-size:11pt!important;} .capCard .t{margin-top:1mm!important;}
+  .whList{display:block!important;}
+  .whList li{border-top:1px solid #ccc!important;padding-block:2mm!important;}
+
+  .card{position:static!important;transform:none!important;opacity:1!important;min-height:0!important;
+    border:1px solid #bbb!important;border-radius:0!important;margin-bottom:4mm!important;
+    page-break-inside:avoid;}
+  .card .hd{border-bottom:1px solid #bbb!important;padding:2.5mm 3mm!important;}
+  .card .bd{padding:3mm!important;}
+  .figs{gap:6mm!important;margin-top:2mm!important;}
+  .meta{margin-top:2mm!important;padding-top:2mm!important;line-height:1.5!important;}
+
+  .corPin{position:static!important;padding:0 0 2mm!important;display:block!important;}
+  .corNum{font-size:20pt!important;}
+  .corBars{display:none!important;}
+  .step{min-height:0!important;opacity:1!important;padding-block:1.5mm!important;}
+  .step h3{font-size:11pt!important;}
+
+  .rows{margin-top:2mm!important;}
+  .row{padding-block:2mm!important;} .row h3{color:#000!important;font-size:11pt!important;}
+  .row p{opacity:1!important;transform:none!important;}
+  .up,.ink .w{opacity:1!important;transform:none!important;}
+  .stats{margin-top:3mm!important;padding-top:3mm!important;}
+  .viz{page-break-inside:avoid;}
+  .tag{border-color:#bbb!important;padding:.6mm 2mm!important;}
+  a{text-decoration:none!important;}
+}
+
+
+
+/* ============================================================
+   DOT MATRIX — 5x7 numerals, the Nothing motif used structurally
+   ============================================================ */
+.dm{display:flex;gap:calc(var(--d) * 1.5);align-items:flex-start;}
+.dmc{display:grid;grid-template-columns:repeat(5,var(--d));grid-auto-rows:var(--d);
+  gap:calc(var(--d) * .62);}
+.dmc i{width:var(--d);height:var(--d);border-radius:50%;background:currentColor;
+  opacity:.13;transform:scale(.72);
+  transition:opacity .5s var(--e),transform .5s var(--e);}
+.dmc i.on{opacity:1;transform:scale(1);}
+.corNum[data-dm]{--d:clamp(9px,1.5vw,15px);line-height:1;font-size:0;}
+@media (max-width:900px){.corNum[data-dm]{--d:clamp(6px,2.2vw,9px);}}
+
+/* section rules draw in rather than simply appearing */
+.label::after{transform:scaleX(0);transform-origin:left center;
+  transition:transform 1.1s var(--e) .1s;}
+.label.in::after{transform:scaleX(1);}
+.nojs .label::after{transform:scaleX(1);}
+
+/* the dot panel inside a capability card fills as the card reaches centre */
+.capDots{
+  -webkit-mask-image:linear-gradient(90deg,#000 calc(var(--fill,0%) - 14%),transparent var(--fill,0%));
+  mask-image:linear-gradient(90deg,#000 calc(var(--fill,0%) - 14%),transparent var(--fill,0%));
+}
+@media print{.dmc i{opacity:1!important;} .capDots{-webkit-mask-image:none!important;mask-image:none!important;}}
+
+/* ============================================================
+   COMMAND PALETTE
+   ============================================================ */
+#pal{position:fixed;inset:0;z-index:560;display:none;align-items:flex-start;justify-content:center;
+  background:rgba(0,0,0,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  padding:clamp(3rem,14vh,8rem) var(--gl) 2rem;}
+#pal.on{display:flex;}
+#palBox{width:min(560px,100%);background:#fff;color:#000;border-radius:18px;overflow:hidden;
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.6);}
+#palIn{width:100%;border:0;border-bottom:1px solid var(--line);padding:1.15rem 1.3rem;
+  font-family:var(--mono);font-size:.88rem;letter-spacing:.04em;color:#000;background:#fff;}
+#palIn:focus{outline:none;}
+#palList{list-style:none;max-height:min(52vh,380px);overflow-y:auto;}
+#palList li{padding:.85rem 1.3rem;display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;cursor:pointer;font-size:.95rem;}
+#palList li em{font-style:normal;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--grey-lt);}
+#palList li.sel{background:#000;color:#fff;}
+#palList li.sel em{color:rgba(255,255,255,.6);}
+#palFoot{padding:.75rem 1.3rem;border-top:1px solid var(--line);font-family:var(--mono);
+  font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-lt);}
+@media print{#pal{display:none!important;}}
+
+
+/* ============================================================
+   DOT MATRIX — 5x7 numerals, the Nothing motif used structurally
+   ============================================================ */
+.dm{display:flex;gap:calc(var(--d) * 1.5);align-items:flex-start;}
+.dmc{display:grid;grid-template-columns:repeat(5,var(--d));grid-auto-rows:var(--d);
+  gap:calc(var(--d) * .62);}
+.dmc i{width:var(--d);height:var(--d);border-radius:50%;background:currentColor;
+  opacity:.13;transform:scale(.72);
+  transition:opacity .5s var(--e),transform .5s var(--e);}
+.dmc i.on{opacity:1;transform:scale(1);}
+.corNum[data-dm]{--d:clamp(9px,1.5vw,15px);line-height:1;font-size:0;}
+@media (max-width:900px){ .corNum[data-dm]{--d:clamp(6px,2.2vw,9px);} }
+
+/* section rules draw in rather than just appearing */
+.label::after{transform:scaleX(0);transform-origin:left center;
+  transition:transform 1.1s var(--e) .1s;}
+.label.in::after{transform:scaleX(1);}
+.nojs .label::after{transform:scaleX(1);}
+
+/* the dot panel inside a capability card fills as the card reaches centre */
+.capDots{
+  -webkit-mask-image:linear-gradient(90deg,#000 calc(var(--fill,0%) - 12%),transparent var(--fill,0%));
+  mask-image:linear-gradient(90deg,#000 calc(var(--fill,0%) - 12%),transparent var(--fill,0%));
+}
+
+
+/* ---- work section end-cap ---- */
+.endcap{display:flex;flex-direction:column;align-items:center;gap:1.1rem;
+  text-align:center;padding-top:clamp(2.4rem,6vw,3.6rem);}
+.endrule{width:1px;height:clamp(38px,7vw,64px);
+  background:linear-gradient(var(--line),var(--black));display:block;}
+.endline{font-family:var(--mono);font-size:clamp(.67rem,2vw,.73rem);
+  letter-spacing:.12em;text-transform:uppercase;color:var(--grey-lt);}
+
 /* ---- scrollbar ---- */
 *::-webkit-scrollbar{width:10px;height:10px;}
 *::-webkit-scrollbar-track{background:#000;}
 *::-webkit-scrollbar-thumb{background:#3a3a3a;border:3px solid #000;border-radius:10px;}
 *::-webkit-scrollbar-thumb:hover{background:#666;}
 
-.touch #grain{animation:none;opacity:.038;}   /* full-screen repaints are costly on phones */
+.touch #grain{animation:none;opacity:.038;}
+/* grain repaints the full viewport; pause it while the page is moving */
+/* pausing wasn't enough — a 5%-opacity full-viewport layer still has to be
+   composited every frame. Drop it out entirely while the page is moving. */
+body.scrolling #grain{opacity:0;animation-play-state:paused;}
+#grain{transition:opacity .28s var(--e);}   /* full-screen repaints are costly on phones */
 
 @media (prefers-reduced-motion:reduce){
   #grain{animation:none;}
@@ -689,22 +970,27 @@ body.introlock{overflow:hidden;}
     <span class="pill"><span class="live"></span>Open to performance marketing roles</span>
     <h1 class="h1">Abhimanyu Hari</h1>
     <p class="hsub">Performance marketing &amp; paid acquisition</p>
-    <p class="htxt">Meta and TikTok Ads for e-commerce. Approximately 8× ROAS in the first month of TikTok execution for a UAE brand.</p>
+    <p class="htxt">TikTok and Meta Ads for e-commerce. July 2026, Coral Perfumes — AED&nbsp;11,987 managed.</p>
     <div class="hbtns">
       <a href="#work" class="btn btn-f">View work</a>
       <a href="#contact" class="btn btn-o">Get in touch</a>
     </div>
+    <div class="hstrip">
+      <div><b>7.116&#215;</b><span>Purchase ROAS</span></div>
+      <div><b>561</b><span>Conversions</span></div>
+      <div><b>AED&nbsp;21.37</b><span>Cost / conversion</span></div>
+    </div>
   </div>
   <div class="hfoot" aria-hidden="true">
-    <span>Adoor, Kerala</span><span class="cue"></span><span>Scroll</span>
+    <span>Adoor, Kerala</span><span>Scroll</span>
   </div>
 </section>
 
 <!-- TICKER -->
 <div id="tick" aria-hidden="true">
   <div id="tickTrack">
-    <span>Meta Ads<i>/</i>TikTok Ads<i>/</i>Paid Social<i>/</i>Campaign Execution<i>/</i>ROAS<i>/</i>Shopify<i>/</i>On-Page SEO<i>/</i>Google Business Profile<i>/</i></span>
-    <span>Meta Ads<i>/</i>TikTok Ads<i>/</i>Paid Social<i>/</i>Campaign Execution<i>/</i>ROAS<i>/</i>Shopify<i>/</i>On-Page SEO<i>/</i>Google Business Profile<i>/</i></span>
+    <span>7.116× ROAS<i>/</i>561 Conversions<i>/</i>AED 21.37 CPA<i>/</i>TikTok Ads<i>/</i>Meta Ads<i>/</i>Paid Social<i>/</i>Shopify<i>/</i>On-Page SEO<i>/</i></span>
+    <span>7.116× ROAS<i>/</i>561 Conversions<i>/</i>AED 21.37 CPA<i>/</i>TikTok Ads<i>/</i>Meta Ads<i>/</i>Paid Social<i>/</i>Shopify<i>/</i>On-Page SEO<i>/</i></span>
   </div>
 </div>
 
@@ -715,7 +1001,7 @@ body.introlock{overflow:hidden;}
     <div class="abt">
       <div>
         <h2 class="h2 up">Building a career in paid acquisition.</h2>
-        <p class="ink">I'm a digital marketing professional focused on performance marketing. Hands-on with Meta Ads and TikTok Ads, including approximately 8× ROAS in the first month of TikTok execution for a UAE-focused e-commerce business.</p>
+        <p class="ink">I'm a digital marketing professional focused on performance marketing. In July 2026 I managed AED 11,987 of TikTok ad spend for Coral Perfumes and returned 7.116× Purchase ROAS — 561 conversions at AED 21.37 each.</p>
         <p class="ink">I built a practical understanding of the full conversion journey through Shopify, creative, SEO and customer-facing work. Now fully focused on paid advertising, and looking to get hands-on with Google Ads and Snapchat Ads.</p>
         <div class="tags up dly1">
           <span class="tag">Meta Ads</span><span class="tag">TikTok Ads</span><span class="tag">Paid Social</span>
@@ -738,9 +1024,9 @@ body.introlock{overflow:hidden;}
       </aside>
     </div>
     <div class="stats">
-      <div class="up"><b class="cnt" data-to="8" data-sfx="×">0</b><span>ROAS, first month TikTok</span></div>
-      <div class="up dly1"><b class="cnt" data-to="400" data-sfx="+">0</b><span>Shopify products optimised</span></div>
-      <div class="up dly2"><b class="cnt" data-to="1000" data-sfx="+">0</b><span>Followers grown organically</span></div>
+      <div class="up"><b class="cnt" data-to="7.116" data-dec="3" data-sfx="×">0</b><span>Purchase ROAS · July 2026</span></div>
+      <div class="up dly1"><b class="cnt" data-to="561">0</b><span>Conversions from TikTok</span></div>
+      <div class="up dly2"><b class="cnt" data-to="21.37" data-dec="2" data-pre="AED ">0</b><span>Cost per conversion</span></div>
     </div>
   </div>
 </section>
@@ -775,7 +1061,7 @@ body.introlock{overflow:hidden;}
         <div class="step" data-i="3" data-n="04" data-role="Meta &amp; TikTok Ads">
           <p class="n">Stage 04</p>
           <h3>Moved into paid media.</h3>
-          <p>Assisted the senior Meta Ads specialist, learned campaign setup and workflows, then ran several campaigns. Moved into hands-on TikTok Ads execution and generated approximately 8× ROAS in the first month.</p>
+          <p>Assisted the senior Meta Ads specialist, then ran campaigns independently. Took over TikTok Ads on a direct-response sales objective — managing spend, conversion volume and cost per acquisition daily.</p>
         </div>
       </div>
     </div>
@@ -785,7 +1071,11 @@ body.introlock{overflow:hidden;}
 <!-- 03 CAPABILITIES -->
 <section id="cap" class="paper">
   <div class="capPin">
-    <div class="capHead"><p class="label">Capabilities <b>( 03 )</b></p></div>
+    <div class="capHead">
+        <p class="label">Capabilities <b>( 03 )</b></p>
+        <h2 class="capH2m">Where I work.</h2>
+        <p class="capSubm">Five areas behind the campaigns.</p>
+      </div>
     <div class="capView">
       <div class="capTrack" id="capTrack">
         <div class="capLead">
@@ -833,6 +1123,7 @@ body.introlock{overflow:hidden;}
     <div class="whStage" id="whStage">
       <div class="whRing" id="whRing"></div>
       <div class="whMark" id="whMark"></div>
+      <div class="reelBar" aria-hidden="true"></div>
       <div class="whCore">
         <p class="n" id="whNum">01 / 08</p>
         <h3 id="whTitle">Meta Ads</h3>
@@ -864,11 +1155,11 @@ body.introlock{overflow:hidden;}
     <p class="label up">Creative &amp; content <b>( 06 )</b></p>
     <h2 class="h2 up">What I make.</h2>
     <div class="rows">
-      <div class="row"><span class="n">01</span><div><h3>AI Marketing Videos</h3><p>Created AI-generated marketing videos for social and campaign use at Coral Perfumes.</p></div><span class="bar"></span></div>
-      <div class="row"><span class="n">02</span><div><h3>AI Marketing Images</h3><p>Produced AI-generated images and product visuals to support campaigns and storefront content.</p></div><span class="bar"></span></div>
-      <div class="row"><span class="n">03</span><div><h3>Product Content</h3><p>SEO-focused product content, collections and combo products across a 400+ product catalogue.</p></div><span class="bar"></span></div>
-      <div class="row"><span class="n">04</span><div><h3>Design Support</h3><p>Assisted the in-house graphic designer on marketing and campaign assets.</p></div><span class="bar"></span></div>
-      <div class="row"><span class="n">05</span><div><h3>Community Management</h3><p>Handled Facebook and Instagram comments and customer enquiries day to day.</p></div><span class="bar"></span></div>
+      <div class="row"><span class="n">01</span><span class="rule" aria-hidden="true"></span><div><h3>AI Marketing Videos</h3><p>Created AI-generated marketing videos for social and campaign use at Coral Perfumes.</p></div><span class="bar"></span></div>
+      <div class="row"><span class="n">02</span><span class="rule" aria-hidden="true"></span><div><h3>AI Marketing Images</h3><p>Produced AI-generated images and product visuals to support campaigns and storefront content.</p></div><span class="bar"></span></div>
+      <div class="row"><span class="n">03</span><span class="rule" aria-hidden="true"></span><div><h3>Product Content</h3><p>SEO-focused product content, collections and combo products across a 400+ product catalogue.</p></div><span class="bar"></span></div>
+      <div class="row"><span class="n">04</span><span class="rule" aria-hidden="true"></span><div><h3>Design Support</h3><p>Assisted the in-house graphic designer on marketing and campaign assets.</p></div><span class="bar"></span></div>
+      <div class="row"><span class="n">05</span><span class="rule" aria-hidden="true"></span><div><h3>Community Management</h3><p>Handled Facebook and Instagram comments and customer enquiries day to day.</p></div><span class="bar"></span></div>
     </div>
   </div>
 </section>
@@ -881,16 +1172,17 @@ body.introlock{overflow:hidden;}
     <div class="stack" id="stack">
 
       <article class="card">
-        <div class="hd"><h3>Coral Perfumes</h3><i>01 / 04</i></div>
+        <div class="hd"><h3>Coral Perfumes</h3><i>TikTok Ads · Jul 2026</i></div>
         <div class="bd">
-          <p>Digital marketing intern on a UAE-focused e-commerce business. Started in product and content operations, then moved into paid media — assisting the senior Meta Ads specialist before running campaigns, and taking on hands-on TikTok Ads execution.</p>
+          <p>Ran TikTok paid advertising on a direct-response sales objective for a UAE fragrance retailer. Managing the budget, conversion volume and cost per acquisition, adjusted against live results — after six months across the storefront, SEO and creative.</p>
           <div class="figs">
-            <div><b>~8×</b><span>ROAS, first month TikTok</span></div>
-            <div><b>400+</b><span>Products optimised</span></div>
-            <div><b>6 mo</b><span>Feb — Aug 2026</span></div>
+            <div><b>7.116×</b><span>Purchase ROAS</span></div>
+            <div><b>561</b><span>Conversions</span></div>
+            <div><b>AED 21.37</b><span>Cost per conversion</span></div>
+            <div><b>AED 11,987</b><span>Ad spend managed</span></div>
           </div>
           <div class="tags"><span class="tag">TikTok Ads</span><span class="tag">Meta Ads</span><span class="tag">Shopify</span><span class="tag">On-Page SEO</span><span class="tag">Google Business Profile</span></div>
-          <p class="meta"><b>Scope</b> — UAE market, with support for the India Shopify store. Also worked across Amazon, Noon and WordPress.</p>
+          <p class="meta"><b>Delivery</b> — 2.32M impressions · 31,787 clicks · 1.37% CTR · AED 0.38 CPC<br><b>Note</b> — Ads Manager reported, 1–31 July 2026. Purchase ROAS is platform-attributed.</p>
         </div>
       </article>
 
@@ -904,7 +1196,7 @@ body.introlock{overflow:hidden;}
             <div><b>1,000+</b><span>Facebook followers</span></div>
           </div>
           <div class="tags"><span class="tag">Meta Ads</span><span class="tag">Dropshipping</span><span class="tag">Shopify</span><span class="tag">USA Market</span></div>
-          <p class="meta"><b>Outcome</b> — Drove impressions, clicks and Add to Cart activity, but no purchases. At the time I was still developing the ability to diagnose conversion problems.<br><b>Learning</b> — Creative, landing-page experience, checkout and payment setup, conversion tracking and budget allocation all decide whether traffic converts.</p>
+          <p class="meta"><b>Outcome</b> — Traffic and Add to Cart, no purchases. Creative, landing page and tracking decide conversion.</p>
         </div>
       </article>
 
@@ -913,7 +1205,7 @@ body.introlock{overflow:hidden;}
         <div class="bd">
           <p>An independent drop-culture brand concept I founded and led as creative and marketing lead. Designed with a deliberate beginning, progression and end rather than as a conventional always-on brand.</p>
           <div class="tags"><span class="tag">Brand Strategy</span><span class="tag">Positioning</span><span class="tag">Drop Culture</span><span class="tag">Shopify</span></div>
-          <p class="meta"><b>Focus</b> — Core concept, positioning, identity, consumer experience and launch direction, exploring scarcity, drops, audience psychology and brand-led demand generation.<br><b>Status</b> — Shopify storefront built as an early prototype. Development intentionally paused rather than compromising the vision with the resources available.</p>
+          <p class="meta"><b>Status</b> — Shopify prototype built, then paused rather than compromise the concept.</p>
         </div>
       </article>
 
@@ -926,9 +1218,15 @@ body.introlock{overflow:hidden;}
             <div><b>2024</b><span>Built &amp; ranked</span></div>
           </div>
           <div class="tags"><span class="tag">WordPress</span><span class="tag">On-Page SEO</span><span class="tag">Local SEO</span></div>
-          <p class="meta"><b>Result</b> — Reached #1 for the targeted local search context.<br><b>Status</b> — Archived. The site went offline after the domain was not renewed.</p>
+          <p class="meta"><b>Result</b> — #1 for the targeted local search term.<br><b>Status</b> — Archived; the domain was not renewed.</p>
         </div>
       </article>
+
+      <div class="endcap">
+        <span class="endrule" aria-hidden="true"></span>
+        <p class="endline">Full TikTok Ads Manager reporting available on request.</p>
+        <a href="#contact" class="btn btn-o btn-s">Request the report</a>
+      </div>
 
     </div>
   </div>
@@ -1031,8 +1329,9 @@ if('IntersectionObserver' in window){
 /* ---------- counters ---------- */
 function fmt(n){ return n>=1000 ? n.toLocaleString('en-US') : ''+n; }
 document.querySelectorAll('.cnt').forEach(function(el){
-  var to=+el.dataset.to||0, sfx=el.dataset.sfx||'';
-  if(SLOW || !('IntersectionObserver' in window)){ el.textContent=fmt(to)+sfx; return; }
+  var to=+el.dataset.to||0, sfx=el.dataset.sfx||'', pre=el.dataset.pre||'', dec=+el.dataset.dec||0;
+  var show=function(v){ return pre + (dec ? v.toFixed(dec) : fmt(Math.round(v))) + sfx; };
+  if(SLOW || !('IntersectionObserver' in window)){ el.textContent=show(to); return; }
   var ob=new IntersectionObserver(function(es){
     if(!es[0].isIntersecting) return;
     ob.disconnect();
@@ -1040,8 +1339,8 @@ document.querySelectorAll('.cnt').forEach(function(el){
     (function run(ts){
       if(!t0) t0=ts||performance.now();
       var p=Math.min(((ts||performance.now())-t0)/1300,1);
-      el.textContent=fmt(Math.round((1-Math.pow(1-p,3))*to))+sfx;
-      if(p<1) requestAnimationFrame(run);
+      el.textContent=show((1-Math.pow(1-p,3))*to);
+      if(p<1) requestAnimationFrame(run); else el.textContent=show(to);
     })();
   },{threshold:.5});
   ob.observe(el);
@@ -1051,11 +1350,14 @@ document.querySelectorAll('.cnt').forEach(function(el){
    TICKER — scrubbed by scroll position
    ============================================================ */
 var tick=document.getElementById('tick'), tickTrack=document.getElementById('tickTrack');
+var tickP, tickHalf;
 function fxTicker(){
   var r=tick.getBoundingClientRect();
   if(r.bottom<0||r.top>innerHeight) return;
   var p=clamp((innerHeight-r.top)/(innerHeight+r.height),0,1);
-  tickTrack.style.transform='translate3d('+(-p*(tickTrack.scrollWidth/2))+'px,0,0)';
+  if(tickP!==undefined && Math.abs(p-tickP)<0.002) return;
+  tickP=p;
+  tickTrack.style.transform='translate3d('+(-p*(tickHalf||(tickHalf=tickTrack.scrollWidth/2)))+'px,0,0)';
 }
 
 /* ============================================================
@@ -1071,6 +1373,8 @@ function fxInk(){
     var r=b.el.getBoundingClientRect();
     if(r.bottom<-40||r.top>innerHeight+40) return;
     var p=clamp((innerHeight*.85-r.top)/(r.height+innerHeight*.28),0,1);
+    if(b.p!==undefined && Math.abs(p-b.p)<0.004) return;   // nothing visible would change
+    b.p=p;
     var head=p*b.ws.length*1.3;
     for(var i=0;i<b.ws.length;i++) b.ws[i].style.opacity=0.16+0.84*clamp(head-i,0,1);
   });
@@ -1099,7 +1403,8 @@ function fxCoral(){
   var s=steps[best];
   corNum.style.opacity=corRole.style.opacity='.2';
   setTimeout(function(){
-    corNum.textContent=s.dataset.n;
+    corNum.setAttribute('data-num', s.dataset.n);
+    if(!corNum.dataset.dm) corNum.textContent=s.dataset.n;   // plain text until the matrix takes over
     corRole.innerHTML=s.dataset.role;
     corNum.style.opacity=corRole.style.opacity='1';
   },SLOW?0:150);
@@ -1133,7 +1438,7 @@ function fxCap(){
    ============================================================ */
 var SK=[
  ['Meta Ads','Meta Ads','Assisted the senior Meta Ads specialist, learned campaign setup and workflows, then ran several campaigns.'],
- ['TikTok Ads','TikTok Ads','Hands-on campaign execution generating approximately 8× ROAS in the first month for a UAE e-commerce brand.'],
+ ['TikTok Ads','TikTok Ads','Managed AED 11,987 of spend in July 2026 — 561 conversions, AED 21.37 CPA, 7.116× Purchase ROAS.'],
  ['Execution','Campaign Execution','Campaign setup and execution across paid social, with practical exposure to budgets and optimisation.'],
  ['Creative','Creative Performance','Reading how creative performs and feeding that back into what gets made and tested next.'],
  ['Conversion','Conversion Journey','Understanding the full path from ad to checkout — traffic acquisition through to purchase.'],
@@ -1147,6 +1452,7 @@ var whNum=document.getElementById('whNum'), whTitle=document.getElementById('whT
 var whList=document.getElementById('whList');
 var whHead=document.querySelector('.whHead');
 var whIts=[], whR=200, whAt=-1, ST=360/SK.length, SWEEP=360-ST;
+var REEL=false, STEPPX=46, wheelP;
 
 SK.forEach(function(s){
   var e=document.createElement('span'); e.className='whIt'; e.textContent=s[0];
@@ -1156,7 +1462,7 @@ whList.innerHTML=SK.map(function(s){ return '<li><h3>'+s[1]+'</h3><p>'+s[2]+'</p
 
 function layWheel(){
   if(pinOff()){ wh.style.height=''; return; }
-  wh.style.height=(innerHeight*(innerWidth<760?2.3:3))+'px';
+  wh.style.height=(innerHeight*(innerWidth<760?1.9:3))+'px';
   var w=whStage.clientWidth||innerWidth, h=whStage.clientHeight||innerHeight;
   /* The ring gets its own box: everything BELOW the section header, minus a
      bottom margin. It is centred in that box rather than in the whole panel,
@@ -1167,7 +1473,19 @@ function layWheel(){
   var freeH    = Math.max(160, (h - 26) - freeTop);
   var cy       = freeTop + freeH/2;
 
-  whR = clamp(Math.min(w*(w<760?0.48:0.42), freeH/2 - 26), 120, 300);
+  REEL = w < 760;
+  whStage.classList.toggle('reel', REEL);
+  if(REEL){
+    /* a ring wastes a tall narrow screen — run a vertical index reel instead */
+    cy = freeTop + freeH*0.38;
+    whStage.style.setProperty('--cy', cy+'px');
+    whStage.style.setProperty('--coreB', Math.round(h*0.08)+'px');
+    STEPPX = clamp(freeH*0.078, 38, 60);
+    whRing.style.width = whRing.style.height = '0px';
+    return;
+  }
+
+  whR = clamp(Math.min(w*0.42, freeH/2 - 26), 120, 300);
   whStage.style.setProperty('--cy', cy+'px');
   whRing.style.width = whRing.style.height = (whR*2)+'px';
   whMark.style.top = (cy - whR - 26)+'px';
@@ -1212,6 +1530,21 @@ function fxWheel(){
   var span=wh.offsetHeight-innerHeight;
   if(span<=0) return;
   var p=clamp(-wh.getBoundingClientRect().top/span,0,1);
+  if(wheelP!==undefined && Math.abs(p-wheelP)<0.0015) return;
+  wheelP=p;
+
+  if(REEL){
+    var head=p*(SK.length-1);
+    for(var k=0;k<whIts.length;k++){
+      var d=k-head, ad=Math.abs(d);
+      var sc=1+Math.max(0,1-ad)*0.16;
+      whIts[k].style.transform='translateY(calc(-50% + '+(d*STEPPX).toFixed(1)+'px)) scale('+sc.toFixed(3)+')';
+      whIts[k].style.opacity = ad<0.5 ? 1 : clamp(1-ad*0.42,0.10,1);
+    }
+    whSet(clamp(Math.round(head),0,SK.length-1));
+    return;
+  }
+
   var rot=-p*SWEEP, edge=whStage.clientWidth/2-74;
   whIts.forEach(function(e,i){
     var a=i*ST+rot;
@@ -1270,19 +1603,55 @@ function fxRows(){
    ============================================================ */
 var cards=document.querySelectorAll('.card');
 function layStack(){
-  var base=innerWidth<700?74:96;
-  cards.forEach(function(c,i){ c.style.top=(base+i*13)+'px'; c.style.zIndex=i+1; });
-}
-function fxStack(){
-  var last=cards.length-1;
+  var base = innerWidth<700 ? 84 : 104;
+  var room = innerHeight - base - 22;
+
+  // measure natural heights first
+  var max = 0;
+  cards.forEach(function(c){ c.style.minHeight=''; if(c.offsetHeight>max) max=c.offsetHeight; });
+
+  // Every card is given the tallest card's height, so each one fully covers the
+  // one before it. Without this a taller card's bottom pokes out underneath.
+  // If even the tallest can't fit under the nav, nothing pins — no hidden content.
+  var canStack = max <= room;
   cards.forEach(function(c,i){
-    if(i===last){ c.style.transform=''; return; }
-    var cov=0;
-    for(var j=i+1;j<cards.length;j++)
-      cov+=clamp((innerHeight-cards[j].getBoundingClientRect().top)/(innerHeight*.75),0,1);
-    c.style.transform='scale('+(1-cov*.03)+')';
+    c.style.minHeight = canStack ? max+'px' : '';
+    c.style.position  = canStack ? 'sticky' : '';
+    c.style.top       = canStack ? (base + i*14)+'px' : '';
+    c.style.zIndex    = String(i+1);
+    c.dataset.stick   = canStack ? '1' : '';
+    if(!canStack) c.style.transform='';
   });
 }
+function fxStack(){
+  if(SLOW) return;
+  var last=cards.length-1, vh=innerHeight;
+  for(var i=0;i<last;i++){
+    var c=cards[i];
+    if(!c.dataset.stick){ c.style.transform=''; continue; }
+    var cov=0;
+    for(var j=i+1;j<cards.length;j++){
+      cov += clamp((vh - cards[j].getBoundingClientRect().top)/(vh*0.8),0,1);
+    }
+    c.style.transform = cov>0.002 ? 'scale('+(1-cov*0.028).toFixed(4)+')' : '';
+  }
+  if(cards[last]) cards[last].style.transform='';
+}
+(function(){
+  if(SLOW || !('IntersectionObserver' in window)){
+    cards.forEach(function(c){ c.classList.add('seen'); });
+    return;
+  }
+  var ob=new IntersectionObserver(function(en){
+    en.forEach(function(e){
+      if(!e.isIntersecting) return;
+      e.target.classList.add('seen');
+      ob.unobserve(e.target);
+    });
+  },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  cards.forEach(function(c){ ob.observe(c); });
+})();
+
 
 /* ============================================================
    08 CONTACT — perspective lay-flat
@@ -1302,6 +1671,7 @@ function fxTilt(){
 var bar=document.getElementById('bar'), hud=document.getElementById('hud');
 var heroIn=document.getElementById('heroIn'), hero=document.getElementById('home');
 var darks=[].slice.call(document.querySelectorAll('#home,.dark,footer,#tick'));
+var footEl=document.querySelector('footer');
 function fxChrome(){
   var y=scrollY;
   var dh=document.documentElement.scrollHeight-innerHeight;
@@ -1312,7 +1682,7 @@ function fxChrome(){
   nav.classList.toggle('lt',!onDark);
   bar.classList.toggle('onDark',onDark);
   // hide the chapter counter once the footer arrives, or it collides with the footer text
-  var fr=document.querySelector('footer').getBoundingClientRect();
+  var fr=footEl.getBoundingClientRect();
   hud.classList.toggle('on', y>hero.offsetHeight*.7 && fr.top>=innerHeight);
 
   var past=y>hero.offsetHeight-nav.offsetHeight;
@@ -1458,6 +1828,8 @@ var lerp  = function(a,b,t){ return a+(b-a)*t; };
 /* ---------------- 3. HERO PARTICLE FIELD ---------------- */
 (function(){
   var hero=document.getElementById('home'); if(!hero||!window.requestAnimationFrame) return;
+  // phones keep the clean static dot grid instead of the animated field
+  if(innerWidth < 760 || !matchMedia('(hover:hover) and (pointer:fine)').matches) return;
   var cv=document.createElement('canvas'); cv.id='field'; cv.setAttribute('aria-hidden','true');
   hero.insertBefore(cv,hero.firstChild);
   hero.classList.add('hasfield');
@@ -1526,13 +1898,6 @@ var lerp  = function(a,b,t){ return a+(b-a)*t; };
     var r=hero.getBoundingClientRect(); tx=e.clientX-r.left; ty=e.clientY-r.top; idle=0;
   });
   hero.addEventListener('mouseleave',function(){ tx=-9999; ty=-9999; });
-  if(!HOVER){                      // touch: drift a focus point on its own
-    setInterval(function(){
-      idle+=1;
-      tx=W*(0.5+0.32*Math.sin(idle/7));
-      ty=H*(0.5+0.26*Math.cos(idle/5));
-    },420);
-  }
   build(); loop();
   cv.addEventListener('thin',function(){      // perf guard asked for fewer points
     GAP = Math.min(GAP+10, 52);
@@ -1581,36 +1946,37 @@ if(HOVER && !SLOW){
   });
 }
 
-/* ---------------- 6. SCROLL VELOCITY SKEW + CARD DEPTH ---------------- */
+/* ---------------- 6. CAPABILITY CARD DEPTH ----------------
+   (The scroll-velocity skew that used to live here was removed — tilting
+   body copy while scrolling reads as a gimmick on a results-led site.) */
 (function(){
-  var skewEls=[].slice.call(document.querySelectorAll('.rails,.rows,.stats,.figs'));
-  skewEls.forEach(function(e){ e.classList.add('skew'); });
   var caps=[].slice.call(document.querySelectorAll('.capCard'));
-  var last=scrollY, vel=0, cur=0, ticking=false;
+  if(!caps.length) return;
+  var queued=false;
 
+  var dots=caps.map(function(c){ return c.querySelector('.capDots'); });
   function frame(){
-    cur=lerp(cur,vel,.12);
-    var sk=clamp(cur*0.035,-3.4,3.4);
-    if(!SLOW) skewEls.forEach(function(e){ e.style.transform='skewY('+sk.toFixed(2)+'deg)'; });
-
-    var cx=innerWidth/2;
-    caps.forEach(function(c){
-      var r=c.getBoundingClientRect();
-      if(r.right<-200||r.left>innerWidth+200){ return; }
-      var d=Math.abs((r.left+r.width/2)-cx)/(innerWidth*0.62);
-      var s=clamp(1-d*0.13,0.86,1);
-      c.style.transform='scale('+s.toFixed(3)+')';
+    var vw=innerWidth, cx=vw/2;
+    for(var i=0;i<caps.length;i++){
+      var c=caps[i], r=c.getBoundingClientRect();
+      if(r.right<-200||r.left>vw+200) continue;
+      var mid=r.left+r.width/2;
+      // one rect read drives both the depth and the dot-panel fill
+      var d=Math.abs(mid-cx)/(vw*0.62);
+      c.style.transform='scale('+clamp(1-d*0.13,0.86,1).toFixed(3)+')';
       c.style.opacity=clamp(1-d*0.45,0.35,1);
-    });
-
-    vel*=0.86;
-    if(Math.abs(cur)>0.05||Math.abs(vel)>0.05){ requestAnimationFrame(frame); }
-    else { ticking=false; skewEls.forEach(function(e){ e.style.transform=''; }); }
+      if(dots[i]){
+        var f=Math.abs(mid-cx)/(vw*0.55);
+        dots[i].style.setProperty('--fill',(clamp(1-f,0,1)*118).toFixed(1)+'%');
+      }
+    }
+    queued=false;
   }
   addEventListener('scroll',function(){
-    var y=scrollY; vel+=(y-last); last=y;
-    vel=clamp(vel,-90,90);
-    if(!ticking){ ticking=true; requestAnimationFrame(frame); }
+    if(!queued){ queued=true; requestAnimationFrame(frame); }
+  },{passive:true});
+  addEventListener('resize',function(){
+    if(!queued){ queued=true; requestAnimationFrame(frame); }
   },{passive:true});
   requestAnimationFrame(frame);
 })();
@@ -1668,9 +2034,10 @@ if(HOVER && !SLOW){
   }
   function wrap(title,inner){ return '<div class="viz"><p class="vzt">'+title+'</p>'+inner+'</div>'; }
 
-  var v1 = wrap('Return on ad spend &#8212; first month, TikTok',
-      bar('Break-even',12.5,'1&#215;',false)+
-      bar('Achieved',100,'~8&#215;',true));
+  var v1 = wrap('Purchase ROAS &#8212; TikTok, July 2026',
+      bar('Break-even',14,'1&#215;',false)+
+      bar('Achieved',100,'7.116&#215;',true)+
+      '<div class="vnote"><span>561 conversions from AED 11,987</span><b>AED 21.37 CPA</b></div>');
 
   var v2 = wrap('Self-funded Meta Ads spend',
       bar('Sales campaign',100,'&#8377;4,000',false)+
@@ -1690,7 +2057,8 @@ if(HOVER && !SLOW){
       '<div class="vrule">'+rule+'</div>'+
       '<div class="vends"><b>#1</b><span>#10</span></div>');
 
-  [v1,v2,v3,v4].forEach(function(markup,i){
+  [null,v2,v3,v4].forEach(function(markup,i){
+    if(!markup) return;
     var body=cards[i].querySelector('.bd'); if(!body) return;
     var after=body.querySelector('.figs')||body.querySelector('p');
     var h=document.createElement('div'); h.innerHTML=markup;
@@ -1736,8 +2104,8 @@ if(HOVER && !SLOW){
   },true);
 })();
 
-/* ---------------- 8. HERO NAME: PER-LETTER CURSOR PHYSICS ---------------- */
-if(HOVER){(function(){
+/* ---------------- 8. HERO NAME: SPLIT + CURSOR PHYSICS ---------------- */
+(function(){
   var h1=document.querySelector('#home .h1'); if(!h1) return;
   var words=h1.textContent.trim().split(/\s+/);
   h1.innerHTML=words.map(function(w){
@@ -1750,6 +2118,7 @@ if(HOVER){(function(){
     return {el:el,x:0,y:0,r:0,tx:0,ty:0,tr:0};
   });
   var mx=-9999,my=-9999,active=false;
+  if(!HOVER){ return; }   // split done; skip the cursor loop on touch
 
   function measure(){
     lts.forEach(function(o){
@@ -1760,7 +2129,8 @@ if(HOVER){(function(){
   addEventListener('mousemove',function(e){ mx=e.clientX; my=e.clientY; },{passive:true});
 
   var R=170;
-  (function run(){
+  var raf=null;
+  function run(){
     if(active){
       for(var i=0;i<lts.length;i++){
         var o=lts[i], dx=o.cx-mx, dy=o.cy-my, d=Math.sqrt(dx*dx+dy*dy);
@@ -1771,20 +2141,24 @@ if(HOVER){(function(){
         o.x=lerp(o.x,o.tx,.14); o.y=lerp(o.y,o.ty,.14); o.r=lerp(o.r,o.tr,.14);
         o.el.style.transform='translate('+o.x.toFixed(2)+'px,'+o.y.toFixed(2)+'px) rotate('+o.r.toFixed(2)+'deg)';
       }
-    }
-    requestAnimationFrame(run);
-  })();
+      raf=requestAnimationFrame(run);
+    } else { raf=null; }               // hero off screen -> stop burning frames
+  }
+  function start(){ if(!raf && active) raf=requestAnimationFrame(run); }
 
-  function refresh(){ measure(); }
+  var mq=false;
+  function refresh(){ if(mq) return; mq=true; requestAnimationFrame(function(){ if(active) measure(); mq=false; }); }
   addEventListener('scroll',refresh,{passive:true});
   addEventListener('resize',function(){ setTimeout(refresh,180); },{passive:true});
   setTimeout(refresh,300); setTimeout(refresh,1600);
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(refresh);
   if('IntersectionObserver' in window){
-    new IntersectionObserver(function(en){ active=en[0].isIntersecting; if(active) measure(); },
+    new IntersectionObserver(function(en){ active=en[0].isIntersecting; if(active){ measure(); start(); } },
       {rootMargin:'60px'}).observe(document.getElementById('home'));
   } else { active=true; }
-})();}
+  addEventListener('mousemove',start,{passive:true});
+  start();
+})();
 
 /* ---------------- 9. SECTION LABEL SCRAMBLE ---------------- */
 (function(){
@@ -1837,6 +2211,303 @@ if(HOVER){(function(){
     requestAnimationFrame(watch);
   }
   requestAnimationFrame(watch);
+})();
+
+/* ---------------- 11. KEYBOARD NAVIGATION ---------------- */
+(function(){
+  var CH=['home','about','coral','cap','skills','tools','creative','work','contact'];
+  addEventListener('keydown',function(e){
+    if(e.metaKey||e.ctrlKey||e.altKey) return;
+    var t=e.target;
+    if(t && (t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.isContentEditable)) return;
+    var n=parseInt(e.key,10);
+    if(!isNaN(n) && n>=0 && n<CH.length){
+      var el=document.getElementById(CH[n]);
+      if(el){ e.preventDefault(); el.scrollIntoView({behavior:SLOW?'auto':'smooth',block:'start'}); }
+    }
+  });
+  var hud=document.getElementById('hud');
+  if(hud){
+    hud.insertAdjacentHTML('beforeend',' <span class="hudkeys">\u00b7 0\u20138</span>');
+    hud.title='Press 0\u20138 to jump \u00b7 click for top';
+    hud.addEventListener('click',function(){ scrollTo({top:0,behavior:SLOW?'auto':'smooth'}); });
+  }
+})();
+
+/* ---------------- 12. COPY EMAIL ---------------- */
+(function(){
+  var mail=document.querySelector('.mail'); if(!mail) return;
+  var addr='hariabhimanyu894@gmail.com';
+  var btn=document.createElement('button');
+  btn.type='button'; btn.className='btn btn-o btn-s'; btn.textContent='Copy email';
+  var host=mail.parentNode.querySelector('.tags');
+  if(host) host.insertBefore(btn,host.firstChild); else mail.parentNode.appendChild(btn);
+
+  var pill=document.createElement('div'); pill.className='copied';
+  pill.setAttribute('role','status'); pill.setAttribute('aria-live','polite');
+  document.body.appendChild(pill);
+
+  function flash(msg){
+    pill.textContent=msg; pill.classList.add('on');
+    clearTimeout(pill._t); pill._t=setTimeout(function(){ pill.classList.remove('on'); },1900);
+  }
+  btn.addEventListener('click',function(){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(addr).then(function(){ flash('Email copied'); },function(){ flash(addr); });
+    } else { flash(addr); }
+  });
+})();
+
+/* ---------------- 13. WORK CARD SPOTLIGHT ---------------- */
+if(HOVER){
+  document.querySelectorAll('.card').forEach(function(c){
+    c.addEventListener('mousemove',function(e){
+      var r=c.getBoundingClientRect();
+      c.style.setProperty('--sx',(e.clientX-r.left)+'px');
+      c.style.setProperty('--sy',(e.clientY-r.top)+'px');
+    });
+  });
+}
+
+/* ---------------- 14. LOCAL TIME ---------------- */
+(function(){
+  var foot=document.querySelector('.hfoot span'); if(!foot) return;
+  function tick(){
+    try{
+      var t=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',
+            hour12:false,timeZone:'Asia/Kolkata'}).format(new Date());
+      foot.textContent='Adoor, Kerala \u2014 '+t+' IST';
+    }catch(err){}
+  }
+  tick(); setInterval(tick,30000);
+})();
+
+/* ---------------- 15. ACCESSIBILITY POLISH ---------------- */
+(function(){
+  var core=document.querySelector('.whCore');
+  if(core){ core.setAttribute('aria-live','polite'); core.setAttribute('aria-atomic','true'); }
+  var stage=document.getElementById('whStage');
+  if(stage){ stage.setAttribute('role','group'); stage.setAttribute('aria-label','Skills, shown one at a time as you scroll'); }
+  var corPin=document.querySelector('.corPin');
+  if(corPin){ corPin.setAttribute('aria-live','polite'); }
+  if('MutationObserver' in window){
+    document.querySelectorAll('.mlink').forEach(function(l){
+      new MutationObserver(function(){
+        if(l.classList.contains('act')) l.setAttribute('aria-current','true');
+        else l.removeAttribute('aria-current');
+      }).observe(l,{attributes:true,attributeFilter:['class']});
+    });
+  }
+})();
+
+/* ---------------- 17. COMMAND PALETTE ---------------- */
+(function(){
+  var ITEMS=[
+    {t:'About',            k:'Section 01', go:function(){ jump('about'); }},
+    {t:'Coral Perfumes',   k:'Section 02', go:function(){ jump('coral'); }},
+    {t:'Capabilities',     k:'Section 03', go:function(){ jump('cap'); }},
+    {t:'Skills',           k:'Section 04', go:function(){ jump('skills'); }},
+    {t:'Toolkit',          k:'Section 05', go:function(){ jump('tools'); }},
+    {t:'Creative & content',k:'Section 06',go:function(){ jump('creative'); }},
+    {t:'Work & case studies',k:'Section 07',go:function(){ jump('work'); }},
+    {t:'Contact',          k:'Section 08', go:function(){ jump('contact'); }},
+    {t:'Copy email address',k:'Action',    go:function(){ copyMail(); }},
+    {t:'Open LinkedIn',    k:'Action',     go:function(){ window.open('https://www.linkedin.com/in/abhimanyuhariofficial','_blank','noopener'); }},
+    {t:'Save as PDF / print',k:'Action',   go:function(){ setTimeout(function(){ print(); },160); }},
+    {t:'Back to top',      k:'Action',     go:function(){ scrollTo({top:0,behavior:SLOW?'auto':'smooth'}); }}
+  ];
+  function jump(id){ var e=document.getElementById(id); if(e) e.scrollIntoView({behavior:SLOW?'auto':'smooth',block:'start'}); }
+  function copyMail(){
+    var a='hariabhimanyu894@gmail.com';
+    var pill=document.querySelector('.copied');
+    function flash(m){ if(!pill) return; pill.textContent=m; pill.classList.add('on');
+      clearTimeout(pill._t); pill._t=setTimeout(function(){ pill.classList.remove('on'); },1900); }
+    if(navigator.clipboard&&navigator.clipboard.writeText)
+      navigator.clipboard.writeText(a).then(function(){ flash('Email copied'); },function(){ flash(a); });
+    else flash(a);
+  }
+
+  var pal=document.createElement('div'); pal.id='pal'; pal.setAttribute('role','dialog');
+  pal.setAttribute('aria-modal','true'); pal.setAttribute('aria-label','Command palette');
+  pal.innerHTML='<div id="palBox"><input id="palIn" type="text" placeholder="Jump to, or type a command…" '+
+                'autocomplete="off" spellcheck="false"><ul id="palList"></ul>'+
+                '<div id="palFoot">↑↓ move · ↵ select · esc close</div></div>';
+  document.body.appendChild(pal);
+  var input=pal.querySelector('#palIn'), list=pal.querySelector('#palList');
+  var shown=[], sel=0, open=false, lastFocus=null;
+
+  function render(q){
+    q=(q||'').trim().toLowerCase();
+    shown = q ? ITEMS.filter(function(i){ return (i.t+' '+i.k).toLowerCase().indexOf(q)>-1; }) : ITEMS.slice();
+    sel=0;
+    list.innerHTML = shown.length
+      ? shown.map(function(i,n){ return '<li'+(n===0?' class="sel"':'')+'><span>'+i.t+'</span><em>'+i.k+'</em></li>'; }).join('')
+      : '<li><span>No match</span></li>';
+    [].forEach.call(list.children,function(li,n){
+      if(!shown.length) return;
+      li.addEventListener('mouseenter',function(){ mark(n); });
+      li.addEventListener('click',function(){ pick(n); });
+    });
+  }
+  function mark(n){
+    sel=n;
+    [].forEach.call(list.children,function(li,i){ li.classList.toggle('sel',i===n); });
+    if(list.children[n]) list.children[n].scrollIntoView({block:'nearest'});
+  }
+  function pick(n){ var it=shown[n]; close(); if(it) it.go(); }
+  function show(){
+    lastFocus=document.activeElement;
+    open=true; pal.classList.add('on'); document.body.classList.add('locked');
+    input.value=''; render(''); setTimeout(function(){ input.focus(); },20);
+  }
+  function close(){
+    open=false; pal.classList.remove('on'); document.body.classList.remove('locked');
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  input.addEventListener('input',function(){ render(input.value); });
+  addEventListener('keydown',function(e){
+    var t=e.target, typing = t && (t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.isContentEditable);
+    if(!open && (e.key==='k'||e.key==='K') && (e.metaKey||e.ctrlKey)){ e.preventDefault(); show(); return; }
+    if(!open && e.key==='/' && !typing){ e.preventDefault(); show(); return; }
+    if(!open) return;
+    if(e.key==='Escape'){ e.preventDefault(); close(); }
+    else if(e.key==='ArrowDown'){ e.preventDefault(); if(shown.length) mark((sel+1)%shown.length); }
+    else if(e.key==='ArrowUp'){ e.preventDefault(); if(shown.length) mark((sel-1+shown.length)%shown.length); }
+    else if(e.key==='Enter'){ e.preventDefault(); if(shown.length) pick(sel); }
+  });
+  pal.addEventListener('click',function(e){ if(e.target===pal) close(); });
+
+  var hud=document.getElementById('hud');
+  if(hud){
+    var hint=hud.querySelector('.hudkeys');
+    if(hint) hint.textContent='\u00b7 0\u20138 \u00b7 / menu';
+    hud.title='Press 0\u20138 to jump \u00b7 / for the menu \u00b7 click for top';
+  }
+})();
+
+/* ---------------- 18. DOT-MATRIX STAGE NUMERAL ---------------- */
+(function(){
+  var el=document.getElementById('corNum'); if(!el) return;
+  var F={
+    '0':'01110,10001,10011,10101,11001,10001,01110',
+    '1':'00100,01100,00100,00100,00100,00100,01110',
+    '2':'01110,10001,00001,00010,00100,01000,11111',
+    '3':'11111,00010,00100,00010,00001,10001,01110',
+    '4':'00010,00110,01010,10010,11111,00010,00010',
+    '5':'11111,10000,11110,00001,00001,10001,01110',
+    '6':'00110,01000,10000,11110,10001,10001,01110',
+    '7':'11111,00001,00010,00100,01000,01000,01000',
+    '8':'01110,10001,10001,01110,10001,10001,01110',
+    '9':'01110,10001,10001,01111,00001,00010,01100'
+  };
+  var cells=[], built=0;
+
+  function build(n){
+    el.textContent='';
+    var wrap=document.createElement('div'); wrap.className='dm';
+    cells=[];
+    for(var c=0;c<n;c++){
+      var g=document.createElement('div'); g.className='dmc'; var arr=[];
+      for(var r=0;r<7;r++) for(var x=0;x<5;x++){
+        var d=document.createElement('i');
+        d.style.transitionDelay=((r*5+x)*7 + c*70)+'ms';
+        g.appendChild(d); arr.push(d);
+      }
+      wrap.appendChild(g); cells.push(arr);
+    }
+    el.appendChild(wrap); built=n;
+    el.dataset.dm='1';
+  }
+
+  function paint(v){
+    v=String(v||'').replace(/\D/g,'') || '0';
+    if(v.length!==built) build(v.length);
+    el.setAttribute('role','img');
+    el.setAttribute('aria-label','Stage '+v);
+    for(var c=0;c<v.length;c++){
+      var rows=(F[v[c]]||F['0']).split(','), arr=cells[c];
+      for(var r=0;r<7;r++) for(var x=0;x<5;x++)
+        arr[r*5+x].classList.toggle('on', rows[r][x]==='1');
+    }
+  }
+
+  paint(el.getAttribute('data-num') || el.textContent);
+  new MutationObserver(function(m){
+    for(var i=0;i<m.length;i++)
+      if(m[i].attributeName==='data-num'){ paint(el.getAttribute('data-num')); return; }
+  }).observe(el,{attributes:true,attributeFilter:['data-num']});
+})();
+
+/* ---------------- 19. CASE-STUDY FIGURES COUNT UP ---------------- */
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  var RX=/^(\D*?)([\d,]+(?:\.\d+)?)(.*)$/;
+  document.querySelectorAll('.figs div b, .stack-fig b').forEach(function(b){
+    var m=RX.exec(b.textContent.trim()); if(!m) return;
+    var pre=m[1], raw=m[2], suf=m[3];
+    var dec=(raw.split('.')[1]||'').length;
+    var target=parseFloat(raw.replace(/,/g,'')); if(!isFinite(target)) return;
+    var grouped=raw.indexOf(',')>-1;
+    function show(v){
+      var t= dec ? v.toFixed(dec)
+                 : (grouped ? Math.round(v).toLocaleString('en-US') : String(Math.round(v)));
+      b.textContent=pre+t+suf;
+    }
+    if(SLOW) return;
+    // year labels and rank positions read as data, not as a quantity to count
+    if(target<12 && !dec && !grouped && suf===''){ return; }
+    var ob=new IntersectionObserver(function(en){
+      if(!en[0].isIntersecting) return;
+      ob.disconnect();
+      var t0=null;
+      (function run(ts){
+        if(!t0) t0=ts||performance.now();
+        var p=Math.min(((ts||performance.now())-t0)/1100,1);
+        show((1-Math.pow(1-p,3))*target);
+        if(p<1) requestAnimationFrame(run); else b.textContent=pre+raw+suf;
+      })();
+    },{threshold:.6});
+    show(0); ob.observe(b);
+  });
+})();
+
+/* ---------------- 20. CAPABILITY DOT PANELS FILL ---------------- */
+
+
+/* ---------------- 22. CREATIVE ROWS: STAGGERED WIPE ---------------- */
+(function(){
+  var rows=[].slice.call(document.querySelectorAll('.row'));
+  if(!rows.length) return;
+  if(SLOW || !('IntersectionObserver' in window)){
+    rows.forEach(function(r){ r.classList.add('rev'); });
+    return;
+  }
+  rows.forEach(function(r,i){
+    var d=(i*110)+'ms';
+    r.querySelectorAll('.n,h3,p').forEach(function(el,j){
+      el.style.transitionDelay='calc('+d+' + '+(j*70)+'ms)';
+    });
+    var rule=r.querySelector('.rule'); if(rule) rule.style.transitionDelay=d;
+  });
+  var ob=new IntersectionObserver(function(en){
+    en.forEach(function(e){
+      if(!e.isIntersecting) return;
+      e.target.classList.add('rev');
+      ob.unobserve(e.target);
+    });
+  },{threshold:.25,rootMargin:'0px 0px -8% 0px'});
+  rows.forEach(function(r){ ob.observe(r); });
+})();
+
+/* ---------------- 23. PAUSE FULL-SCREEN GRAIN WHILE SCROLLING ---------------- */
+(function(){
+  var b=document.body, t=null;
+  addEventListener('scroll',function(){
+    if(!t) b.classList.add('scrolling');
+    clearTimeout(t);
+    t=setTimeout(function(){ b.classList.remove('scrolling'); t=null; },140);
+  },{passive:true});
 })();
 
 })();
